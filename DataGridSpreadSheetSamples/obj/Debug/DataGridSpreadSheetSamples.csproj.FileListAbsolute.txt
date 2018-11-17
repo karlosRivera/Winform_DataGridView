@@ -18,3 +18,6 @@ C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples
 C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples\Winform_DataGridView\DataGridSpreadSheetSamples\obj\Debug\DataGridSpreadSheetSamples.Properties.Resources.resources
 C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples\Winform_DataGridView\DataGridSpreadSheetSamples\obj\Debug\DataGridSpreadSheetSamples.csproj.GenerateResource.Cache
 C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples\Winform_DataGridView\DataGridSpreadSheetSamples\obj\Debug\DataGridSpreadSheetSamples.Form3.resources
+C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples\Winform_DataGridView\DataGridSpreadSheetSamples\bin\Debug\unvell.ReoGrid.dll
+C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples\Winform_DataGridView\DataGridSpreadSheetSamples\bin\Debug\unvell.ReoGrid.xml
+C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples\Winform_DataGridView\DataGridSpreadSheetSamples\obj\Debug\DataGridSpreadSheetSamples.ReoGrid.resources

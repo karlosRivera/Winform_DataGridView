@@ -29,7 +29,7 @@ namespace DataGridSpreadSheetSamples
                                              {"4","13","80","40"},
                                              {"9","12","55","50"},
                                              {"6","19","21","60"},
-                                             {"sum(1+2)","41","33","70"}//7
+                                             {"F:SUM(A1:A2)","F:SUM(B1:B6)","F:SUM(C1:C3)","F:SUM(D2+:D5)"}//7
                                           };
 
             NumRows = rows.GetLength(0);
@@ -50,20 +50,14 @@ namespace DataGridSpreadSheetSamples
                 for (int j = 0; j < NumColumns; j++)
                 {
                     dgList.Rows[i].Cells[j].Value = rows[i, j];
+                    if(dgList.Rows[i].Cells[j].Value.ToString().StartsWith("sum"))
+                    {
+                        dgList.Rows[i].Cells[j].Style.BackColor = Color.LightGoldenrodYellow;
+                        dgList.Rows[i].Cells[j].Tag = "F";
+                    }
                 }
             }
 
-            //for (int i = 0; i < rows.GetLength(0); i++)// array rows
-            //{
-            //    string[] row = new string[rows.GetLength(1)];
-
-            //    for (int j = 0; j < rows.GetLength(1); j++)
-            //    {
-            //        row[j] = rows[i, j];
-            //    }
-
-            //    dgList.Rows.Add(row);
-            //}
         }
 
         private string GenerateColumnText(int num)
