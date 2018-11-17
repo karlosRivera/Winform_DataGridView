@@ -12,7 +12,6 @@ C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples
 C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples\Winform_DataGridView\DataGridSpreadSheetSamples\obj\Debug\DataGridSpreadSheetSamples.pdb
 C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples\Winform_DataGridView\DataGridSpreadSheetSamples\bin\Debug\DataGridSpreadSheetSamples.exe
 C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples\Winform_DataGridView\DataGridSpreadSheetSamples\bin\Debug\DataGridSpreadSheetSamples.pdb
-C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples\Winform_DataGridView\DataGridSpreadSheetSamples\obj\Debug\DataGridSpreadSheetSamples.csprojResolveAssemblyReference.cache
 C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples\Winform_DataGridView\DataGridSpreadSheetSamples\obj\Debug\DataGridSpreadSheetSamples.Form1.resources
 C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples\Winform_DataGridView\DataGridSpreadSheetSamples\obj\Debug\DataGridSpreadSheetSamples.Form2.resources
 C:\Users\TRIDIP\Documents\Visual Studio 2013\Projects\DataGridSpreadSheetSamples\Winform_DataGridView\DataGridSpreadSheetSamples\obj\Debug\DataGridSpreadSheetSamples.Properties.Resources.resources

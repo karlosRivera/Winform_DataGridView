@@ -31,6 +31,7 @@ namespace DataGridSpreadSheetSamples
                                              {"6","19","21","60"},
                                              {"=SUM(A1:A2)","=SUM(B1:B6)","=SUM(C1:C3)","=SUM(D2:D5)"}
                                           };
+
             NumRows = rows.GetLength(0);
             NumColumns = rows.GetLength(1);
 
@@ -40,8 +41,34 @@ namespace DataGridSpreadSheetSamples
                 for (int col = 0; col < NumColumns; col++)
                 {
                     sheet[row, col] = rows[row, col];
+                    if(rows[row, col].StartsWith("=SUM"))
+                    {
+                        string cellname = GenerateColumnText(col) + (row+1).ToString();
+                        var cell = sheet.Cells[cellname];
+                        cell.Style.BackColor = Color.SkyBlue;
+
+                    }
+
                 }
             }
+        }
+
+        //generate excel like column text for grid header
+        private string GenerateColumnText(int num)
+        {
+            string str = "";
+            char achar;
+            int mod;
+            while (true)
+            {
+                mod = (num % 26) + 65;
+                num = (int)(num / 26);
+                achar = (char)mod;
+                str = achar + str;
+                if (num > 0) num--;
+                else if (num == 0) break;
+            }
+            return str;
         }
     }
 }
