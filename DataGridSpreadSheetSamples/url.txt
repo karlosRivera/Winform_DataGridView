@@ -3,5 +3,13 @@ https://reogrid.net/walkthroughs/recommended-practice-for-using-reogrid/
 https://reogrid.net/faq/fill-grid-with-datatable/
 https://reogrid.net/document/
 https://reogrid.net/document/excel-compatible-functions/
-
 https://stackoverflow.com/questions/19543279/microsoft-office-interop-excel-reference-cannot-be-found
+
+
+https://stackoverflow.com/questions/53420567/c-sharp-programmatically-excel-file-population-taking-long-time-for-formulas
+https://codereview.stackexchange.com/questions/44169/creating-excel-document-is-very-slow
+https://codereview.stackexchange.com/questions/12837/copy-excel-formula-in-a-relative-way
+https://codereview.stackexchange.com/questions/69301/tuning-excel-calculation-engine-which-uses-ms-excel-interop
+http://www.clear-lines.com/blog/post/Write-data-to-an-Excel-worksheet-with-C-fast.aspx
+
+

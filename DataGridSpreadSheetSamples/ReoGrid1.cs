@@ -26,8 +26,6 @@ namespace DataGridSpreadSheetSamples
         private void button1_Click(object sender, EventArgs e)
         {
             string strSum = "", strColName, strImmediateOneUp = "", strImmediateTwoUp = "";
-            //int NumRows = 10;
-            //int NumColumns = 5;
 
             int NumRows = 10;
             int NumColumns = 5;
