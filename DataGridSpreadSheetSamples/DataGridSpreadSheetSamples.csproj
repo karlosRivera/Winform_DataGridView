@@ -95,6 +95,12 @@
     <Compile Include="ReoGrid.Designer.cs">
       <DependentUpon>ReoGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReoGrid1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReoGrid1.Designer.cs">
+      <DependentUpon>ReoGrid1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +124,9 @@
     </Compile>
     <EmbeddedResource Include="ReoGrid.resx">
       <DependentUpon>ReoGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReoGrid1.resx">
+      <DependentUpon>ReoGrid1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
