@@ -47,6 +47,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -101,6 +106,12 @@
     <Compile Include="ReoGrid1.Designer.cs">
       <DependentUpon>ReoGrid1.cs</DependentUpon>
     </Compile>
+    <Compile Include="WriteToExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WriteToExcel.Designer.cs">
+      <DependentUpon>WriteToExcel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReoGrid1.resx">
       <DependentUpon>ReoGrid1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WriteToExcel.resx">
+      <DependentUpon>WriteToExcel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

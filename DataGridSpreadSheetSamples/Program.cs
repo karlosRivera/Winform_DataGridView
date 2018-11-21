@@ -16,7 +16,7 @@ namespace DataGridSpreadSheetSamples
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReoGrid1());
+            Application.Run(new WriteToExcel());
         }
     }
 }

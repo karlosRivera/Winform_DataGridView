@@ -3,3 +3,5 @@ https://reogrid.net/walkthroughs/recommended-practice-for-using-reogrid/
 https://reogrid.net/faq/fill-grid-with-datatable/
 https://reogrid.net/document/
 https://reogrid.net/document/excel-compatible-functions/
+
+https://stackoverflow.com/questions/19543279/microsoft-office-interop-excel-reference-cannot-be-found
