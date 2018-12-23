@@ -139,11 +139,11 @@ namespace DataGridSpreadSheetSamples
             int currow = 0;
             bool firstTimeSum = true;
 
-            int NumRows = 10;
-            int NumColumns = 5;
+            int NumRows = 1000;
+            int NumColumns = 100;
 
             var sheet = reoGrd.CurrentWorksheet;
-            sheet.Resize(NumRows, NumColumns);  // resize 
+            sheet.Resize(NumRows, NumColumns+1);  // resize 
 
             DataTable dt = new DataTable();
 
@@ -213,7 +213,10 @@ namespace DataGridSpreadSheetSamples
                 startsum = 1;
             }
 
+
+            sheet.SuspendFormulaReferenceUpdates();
             sheet["A1"] = dt;
+            sheet.ResumeFormulaReferenceUpdates();
 
             stopwatch.Stop();
             TimeSpan timeSpan = stopwatch.Elapsed;
