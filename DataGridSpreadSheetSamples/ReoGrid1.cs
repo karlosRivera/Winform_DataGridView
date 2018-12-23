@@ -128,7 +128,7 @@ namespace DataGridSpreadSheetSamples
             return str;
         }
 
-        private void button2_Click(object sender, System.EventArgs e)
+        private async void button2_Click(object sender, System.EventArgs e)
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -139,84 +139,90 @@ namespace DataGridSpreadSheetSamples
             int currow = 0;
             bool firstTimeSum = true;
 
-            int NumRows = 1000;
+            int NumRows = 8000;
             int NumColumns = 100;
-
             var sheet = reoGrd.CurrentWorksheet;
-            sheet.Resize(NumRows, NumColumns+1);  // resize 
 
-            DataTable dt = new DataTable();
-
-            for (int col = 0; col < NumColumns; col++)
+            await Task.Run(() =>
             {
-                strColName = GenerateColumnText(col);
-                DataColumn datacol = new DataColumn(strColName, typeof(string));
-                dt.Columns.Add(datacol);
-            }
+                BeginInvoke((Action)(() =>
+                {
+                    sheet.Resize(NumRows, NumColumns + 1);  // resize 
+                }));
 
-
-            for (int row = 0; row < NumRows; row++)
-            {
-                dt.Rows.Add();
+                DataTable dt = new DataTable();
 
                 for (int col = 0; col < NumColumns; col++)
                 {
-                    if (row < 2)
+                    strColName = GenerateColumnText(col);
+                    DataColumn datacol = new DataColumn(strColName, typeof(string));
+                    dt.Columns.Add(datacol);
+                }
+
+
+                for (int row = 0; row < NumRows; row++)
+                {
+                    dt.Rows.Add();
+
+                    for (int col = 0; col < NumColumns; col++)
                     {
-                        dt.Rows[row][col] = new Random().Next(1, NumRows).ToString("D2");
-                    }
-                    else
-                    {
-                        if (firstTimeSum)
-                        {
-                            if (row - currow == 2)
-                            {
-                                currow = row;
-                                startsum = 0;
-                                firstTimeSum = false;
-                            }
-                            else
-                            {
-                                startsum = 1;
-                            }
-                        }
-                        else
-                        {
-                            if (row - currow == 3)
-                            {
-                                currow = row;
-                                startsum = 0;
-                            }
-                        }
-
-
-                        if (startsum == 0)
-                        {
-                            strColName = GenerateColumnText(col);
-                            strImmediateOneUp = strColName + ((row + 1) - 1).ToString();
-                            strImmediateTwoUp = strColName + ((row + 1) - 2).ToString();
-                            strSum = string.Format("=SUM({0}:{1})", strImmediateTwoUp, strImmediateOneUp);
-                            dt.Rows[row][col] = strSum;
-
-                            string cellname = GenerateColumnText(col) + (row + 1).ToString();
-                            var cell = sheet.Cells[cellname];
-                            cell.Style.BackColor = Color.LightGoldenrodYellow;
-                        }
-                        else
+                        if (row < 2)
                         {
                             dt.Rows[row][col] = new Random().Next(1, NumRows).ToString("D2");
                         }
+                        else
+                        {
+                            if (firstTimeSum)
+                            {
+                                if (row - currow == 2)
+                                {
+                                    currow = row;
+                                    startsum = 0;
+                                    firstTimeSum = false;
+                                }
+                                else
+                                {
+                                    startsum = 1;
+                                }
+                            }
+                            else
+                            {
+                                if (row - currow == 3)
+                                {
+                                    currow = row;
+                                    startsum = 0;
+                                }
+                            }
+
+
+                            if (startsum == 0)
+                            {
+                                strColName = GenerateColumnText(col);
+                                strImmediateOneUp = strColName + ((row + 1) - 1).ToString();
+                                strImmediateTwoUp = strColName + ((row + 1) - 2).ToString();
+                                strSum = string.Format("=SUM({0}:{1})", strImmediateTwoUp, strImmediateOneUp);
+                                dt.Rows[row][col] = strSum;
+
+                                string cellname = GenerateColumnText(col) + (row + 1).ToString();
+                                var cell = sheet.Cells[cellname];
+                                cell.Style.BackColor = Color.LightGoldenrodYellow;
+                            }
+                            else
+                            {
+                                dt.Rows[row][col] = new Random().Next(1, NumRows).ToString("D2");
+                            }
+                        }
+
                     }
 
+                    startsum = 1;
                 }
 
-                startsum = 1;
-            }
 
-
-            sheet.SuspendFormulaReferenceUpdates();
-            sheet["A1"] = dt;
-            sheet.ResumeFormulaReferenceUpdates();
+                sheet.SuspendFormulaReferenceUpdates();
+                sheet["A1"] = dt;
+                sheet.ResumeFormulaReferenceUpdates();
+            });
 
             stopwatch.Stop();
             TimeSpan timeSpan = stopwatch.Elapsed;
